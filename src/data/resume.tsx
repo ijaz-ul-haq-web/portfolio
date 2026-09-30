@@ -7,11 +7,6 @@ import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Python } from "@/components/ui/svgs/python";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 
-// ⚠️ PLACEHOLDERS TO REPLACE BEFORE GOING LIVE
-// - `url` below (your real deployed domain)
-// - every `href` / "Website" link under `projects` (currently placeholder *.vercel.app guesses)
-// - `contact.social.LinkedIn.url` (placeholder profile URL)
-// - project GitHub repo names under `links` (confirm they match your actual repo names)
 
 export const DATA = {
   name: "Ijaz Ul Haq",
@@ -60,9 +55,14 @@ export const DATA = {
     },
   },
 
-  // No employer history yet — the Work Experience section on the page only
-  // renders when this array isn't empty, so it's simply left out for now.
-  work: [],
+  work: [] as {
+    company: string;
+    title: string;
+    logoUrl: string;
+    start: string;
+    end?: string;
+    description: string;
+}[],
 
   education: [
     {
