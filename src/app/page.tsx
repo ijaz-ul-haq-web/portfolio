@@ -75,21 +75,15 @@ export default function Page() {
             {DATA.education.map((education, index) => {
               const hasLink =
                 education.href && education.href !== "#";
-              const Wrapper = hasLink ? Link : "div";
-              const wrapperProps = hasLink
-                ? {
-                    href: education.href,
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                  }
-                : {};
               return (
               <BlurFade
                 key={education.school + education.degree}
                 delay={BLUR_FADE_DELAY * 8 + index * 0.05}
               >
-                <Wrapper
-                  {...wrapperProps}
+                <Link
+                  href={education.href || "#"}
+                  target={hasLink ? "_blank" : undefined}
+                  rel={hasLink ? "noopener noreferrer" : undefined}
                   className="flex items-center gap-x-3 justify-between group"
                 >
                   <div className="flex items-center gap-x-3 flex-1 min-w-0">
@@ -121,7 +115,7 @@ export default function Page() {
                       </span>
                     </div>
                   )}
-                </Wrapper>
+                </Link>
               </BlurFade>
               );
             })}
