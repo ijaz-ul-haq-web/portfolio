@@ -11,7 +11,7 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 export const DATA = {
   name: "Ijaz Ul Haq",
   initials: "IH",
-  url: "https://ijazulhaq.vercel.app",
+  url: "https://portfolio-alpha-navy-70.vercel.app/",
   location: "Shabqadar, Charsadda, Khyber Pakhtunkhwa, Pakistan",
   locationLink: "https://www.google.com/maps/place/Shabqadar",
   description:
@@ -42,7 +42,7 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/ijaz-ul-haq-web",
+        url: "https://www.linkedin.com/in/ijaz-ul-haq-663abb43b/",
         icon: Icons.linkedin,
         navbar: true,
       },
